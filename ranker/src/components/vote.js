@@ -66,8 +66,7 @@ export default class Vote extends Component {
 
         leftPlayer.Elo = lElo;
         rightPlayer.Elo = rElo;
-        const updatePlayers = async () =>{
-            await axios({
+            axios({
                 method: 'post',
                 url: 'http://localhost:3000/update',
                 data: {
@@ -77,7 +76,7 @@ export default class Vote extends Component {
                 }
               }).then((response) => {
               });
-              await axios({
+              axios({
                 method: 'post',
                 url: 'http://localhost:3000/update',
                 data: {
@@ -87,9 +86,6 @@ export default class Vote extends Component {
                 }
               }).then((response) => {
               });
-          }
-
-          updatePlayers()
         var left = Math.floor(Math.random() * (players.length));
         var right = Math.floor(Math.random() * (players.length));
         while(right === left){
@@ -115,9 +111,7 @@ export default class Vote extends Component {
         leftPlayer.Elo = lElo;
         rightPlayer.Elo = rElo;
         
-        
-        const updatePlayers = async () =>{
-            await axios({
+        axios({
                 method: 'post',
                 url: 'http://localhost:3000/update',
                 data: {
@@ -127,7 +121,7 @@ export default class Vote extends Component {
                 }
               }).then((response) => {
               });
-              await axios({
+              axios({
                 method: 'post',
                 url: 'http://localhost:3000/update',
                 data: {
@@ -137,10 +131,6 @@ export default class Vote extends Component {
                 }
               }).then((response) => {
               });
-          }
-
-          updatePlayers()
-
 
           var left = Math.floor(Math.random() * (players.length));
         var right = Math.floor(Math.random() * (players.length));

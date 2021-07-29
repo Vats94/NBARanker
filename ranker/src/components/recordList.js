@@ -7,7 +7,6 @@ const Record = (props) => (
   <tr>
     <td>{props.record.rank}</td>
     <td>{props.record.playerName}</td>
-    <td>{props.record.Elo}</td>
   </tr>
 );
 
@@ -91,7 +90,6 @@ export default class RecordList extends Component {
             <tr>
               <th>Rank</th>
               <th>Player Name</th>
-              <th>Elo</th>
             </tr>
           </thead>
           <tbody>{this.recordList()}</tbody>
